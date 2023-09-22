@@ -16,7 +16,7 @@ window.onscroll = function (){
         document.getElementById("arrup").style.opacity="0"
         document.getElementById("arrup").style.zIndex="-50";
     }
-    if(window.scrollY >= section_4.offsetTop - 100){
+    if(window.scrollY >= section_4.offsetTop - 350){
         document.querySelector(".mess-1").style.left="0"
         document.querySelector(`form`).style.top="0"
     }   
