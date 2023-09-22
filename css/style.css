@@ -1,0 +1,926 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Courgette&family=El+Messiri:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gugi&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lily+Script+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+HK:wght@100;300;400;500;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oleo+Script:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Orbitron:wght@500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: var(--grcolor);
+}
+::-webkit-scrollbar {
+    width: 14px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--fontcolor);
+}
+
+body{
+    transition: 1s ease all;
+    font-family: 'Cairo', Arial;
+    background-color: var(--maincolor);
+}
+
+.arr-up{
+    position: fixed;
+    z-index: -50;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--fontcolor);
+    top: calc(100% - 70px);
+    left: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.arr-up i{
+    position: relative;
+    top: 0;
+    transition: 0.5s ease;
+}
+.arr-up:hover i{
+    /*top: -70px;*/
+    animation: arr 1.5s ease;
+}
+
+
+
+.main-1{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--maincolor);
+    display: flex;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 10vh;
+    background-color: var(--maincolor);
+    
+}.head .h-1{
+    display: flex;
+    align-items: center;
+}
+.head .h-1 img{ 
+    width: 60px;
+    height: 60px;
+}
+.head .h-2{
+    display: flex;
+    align-items: center;
+}
+.head .h-2 a{
+    margin: 0 25px;
+    font-size: 17px;
+    transition: 0.5s ease;
+}
+.head .h-2 a:hover{
+    color: var(--fontcolor);
+    text-shadow: 0 10px 20px var(--fontcolor);
+}
+
+.head .h-3{
+    font-size: 25px;
+    color: white;
+    transition: 0.5s ease all;
+}
+.head .h-3:hover{
+    transform: rotate(360deg);
+    color: var(--fontcolor);
+}
+
+
+
+
+
+.head .h-menu{
+    display: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.5s ease all;
+    
+}
+.head .h-menu i{
+    transition: 0.5s ease all;
+}
+.head .h-menu:hover i{
+    color: var(--fontcolor);
+}
+.head .h-menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s ease all;
+    z-index: -10;
+    
+}
+
+.head .h-menu:hover .menu{
+    top: 70px;
+    z-index: 99;
+    opacity: 1;
+}
+.head .h-menu:hover .menu div{
+    top: 0;
+}
+
+
+.head .h-menu .menu div a{
+    color: white;
+    transition: 0.5s all ease;
+    font-size: 18px;
+}
+.head .h-menu .menu div:hover a{
+    color: black;
+}
+.head .h-menu .menu div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: black;
+    transition: 0.5s all ease;
+    position: relative;
+}
+.head .h-menu .menu div:hover{
+    background-color: var(--fontcolor);
+}
+
+.head .h-menu .menu .mu-2{
+    top: -10vh;
+}
+.head .h-menu .menu .mu-3{
+    top: -20vh;
+}
+.head .h-menu .menu .mu-4{
+    top: -30vh;
+}
+.head .h-menu .menu .mu-5{
+    top: -40vh;
+}
+
+.main-1 .intro,.main-1 .intro-img{
+    width: 50%;
+    height: calc(100vh - 70px);
+}
+
+.main-1 .intro-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.main-1 .intro-img .ah{
+    width: 350px;
+    position: relative;
+    top: 9vh;
+    z-index: 2;
+}
+.main-1 .intro-img .bak{
+    position: absolute;
+    z-index: 0;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+
+
+
+.main-1 .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 150px;
+}
+.intro .intro-cont .i-1{
+    font-size: 30px;
+    color: var(--fontcolor);
+}
+.intro .intro-cont .i-2{
+    font-size: 75px;
+    font-weight: 600;
+    color: white;
+    margin-top: -20px;
+}
+.intro .intro-cont .i-3{
+    color: var(--grcolor);
+    font-size: 25px;
+    margin-top: -20px;
+}
+.intro .intro-cont .i-4 {
+    margin-top: 50px;
+}
+.intro .intro-cont .i-4 a{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: var(--fontcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.5s all ease;
+}
+.intro .intro-cont .i-4 a:hover{
+    box-shadow: 0 10px 10px black;
+}
+
+
+.intro .intro-cont .links{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.intro .intro-cont .links a{
+    font-size: 24px;
+    transition: 0.5s all ease;
+}
+
+.intro .intro-cont .links a:hover{
+    color: var(--fontcolor);
+    text-shadow: 0 0 20px white;
+}
+
+.main-2{
+    width: 100%;
+
+    background-color: var(--secondcolor);
+}
+.ab-1{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+.ab-1 .ab-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+}
+.ab-1 .ab-img img{
+    width: 433px;
+}
+.ab-1 .ab-txt{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ab-1 .ab-txt .abt-1{
+    color: var(--fontcolor);
+    font-size: 50px;
+    font-weight: 600;
+}
+.ab-1 .ab-txt .abt-2{
+    color: var(--grcolor);
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.ab-1 .ab-txt .abt-3{
+    display: flex;
+    margin-top: 30px;
+}
+.ab-1 .ab-txt .abt-3 img{
+    width: 200px;
+    transition: 0.5s ease;
+}
+.ab-1 .ab-txt .abt-4{
+    margin-top: 55px;
+    display: flex;
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+}
+.ab-1 .ab-txt .abt-4 a{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color: var(--fontcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    overflow: hidden;
+    transition: 0.5s all ease;
+}
+.ab-1 .ab-txt .abt-4 a i{
+    margin-left: 7px;
+    margin-top: 2px;
+    transition: 0.5s all ease;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.ab-1 .ab-txt .abt-4 a:hover i{
+    left: 50px;
+}
+.ab-1 .ab-txt .abt-4 a:hover{
+    box-shadow: 0 10px 10px black;
+}
+.ab-1 .ab-txt .abt-4 :nth-child(2):hover i{
+    top: 30px;
+    left: 0;
+}
+
+
+
+
+.ab-2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.ab-2 .ab-bars-1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 50px 0;
+    padding-right: 10px;
+}
+.ab-2 .ab-bars-1 .main-bar{
+    width: 400px;
+    height: 70px;
+}
+.ab-2 .ab-bars-1 .main-bar .bar-1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ab-2 .ab-bars-1 .main-bar .bar-1 span{
+    font-size: 20px;
+    color: var(--fontcolor);
+}
+.ab-2 .ab-bars-1 .main-bar .bar-2{
+    width: 100%;
+    height: 10px;
+    background-color: black;
+}
+.ab-2 .ab-bars-1 .main-bar .bar-2 .bar{
+    background-color: var(--fontcolor);
+    height: 100%;
+    transition: 0.8s ease;
+
+}
+
+
+
+
+.ab-2 .ab-bars-2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 50px 0 50px 50px;
+}
+.ab-2 .ab-bars-2 .main-bar{
+    width: 400px;
+    height: 70px;
+}
+.ab-2 .ab-bars-2 .main-bar .bar-1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ab-2 .ab-bars-2 .main-bar .bar-1 span{
+    font-size: 20px;
+    color: var(--fontcolor);
+}
+.ab-2 .ab-bars-2 .main-bar .bar-2{
+    width: 100%;
+    height: 10px;
+    background-color: black;
+}
+.ab-2 .ab-bars-2 .main-bar .bar-2 .bar{
+    background-color: var(--fontcolor);
+    height: 100%;
+    transition: 0.8s ease;
+    
+}
+
+
+
+
+
+
+
+.main-3{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--maincolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-3 .srv-1{
+    font-size: 45px;
+    font-weight: 600;
+    color: var(--fontcolor);
+}
+.main-3 .srv-2{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 110px;
+}
+.main-3 .srv-2 .srv{
+    width: 350px;
+    height: 300px;
+    z-index: 5;
+    margin: 0 100px;
+    transition: 0.5s ease;
+    position: relative;
+    background-color: var(--secondcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-3 .srv-2 .srv:hover{
+    box-shadow: 0 0 40px 10px black;
+
+}
+
+.srv-2 .srv .srv-ico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: var(--fontcolor);
+}
+.srv-2 .srv .srv-title{
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--grcolor);
+    letter-spacing: 2px;
+}
+.srv-2 .srv .srv-info{
+    margin-top: 30px;
+}
+.srv-2 .srv .srv-info a{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background-color: var(--fontcolor);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s all ease;
+} 
+.srv-2 .srv .srv-info a:hover{
+    box-shadow: 0 10px 20px black;
+}
+.main-4{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--secondcolor);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.main-4 .mess{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+.main-4 .mess .mess-1{
+    display: flex;
+    font-size: 24px;
+    color: var(--grcolor);
+    flex-direction: column;
+    font-weight: 300;
+    position: relative;
+    left: -1000px;
+    transition: 0.5s all ease;
+}
+.main-4 .mess .mess-1 .qust{
+    color: var(--fontcolor);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+.main-4 .mess .mess-1 .mess-links{
+    margin-top: 10px;
+}
+.main-4 .mess .mess-1 .mess-links a{
+    margin-right: 10px;
+    transition: 0.5s ease all;
+}
+.main-4 .mess .mess-1 .mess-links a:hover{
+    text-shadow: 0 0 20px white;
+    color: var(--fontcolor);
+}
+
+
+
+
+
+
+
+.main-4 .mess form{
+    width: 450px;
+    height: 500px;
+    background-color: var(--maincolor);
+    box-shadow: 0 0 10px 0px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5vh;
+    position: relative;
+    top: 500px;
+    transition: 0.5s all ease;
+}
+.mess form .inp{
+    width: 100%;
+    height: 50px;
+    margin: 17px 0;
+    display: flex;
+    position: relative;
+}
+
+.mess form .inp input{
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--grcolor);
+    font-size: 18px;
+    color: var(--grcolor);
+    position: relative;
+    padding-left: 10px;
+}
+
+
+.mess form .inp span::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2.5px;
+    background-color: var(--fontcolor);
+    left: 0;
+    top: 48px;
+    transition: 0.5s all ease;
+}
+.mess form .inp label{
+    position: absolute;
+    color: var(--grcolor);
+    top: 50%;
+    transition: .5s;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.inp input:focus ~ label,
+.inp input:valid ~ label{
+    top: -5px;
+    color: var(--fontcolor);
+}
+.inp input:focus ~ span::before,
+.inp input:valid ~ span::before{
+    width: 100%;
+}
+
+
+
+
+.mess form .inp.btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.mess form .inp.btn button{
+    width: 120px;
+    height: 40px;
+    background-color: var(--fontcolor);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: 0.5s all ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mess form .inp.btn button i{
+    margin-left: 10px;
+    opacity: 0.9;
+    position: relative;
+    transition: 0.5s all ease;
+    left: 0;
+    top: 0;
+
+}
+.mess form .inp.btn button:hover i{
+    top: -35px;
+    left: 35px;
+}
+
+
+
+
+
+.main-5{
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 17px;
+    color: var(--grcolor);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1510px) {
+
+    .intro .intro-cont .i-2{
+        font-size: 55px;
+    }
+    .intro .intro-cont .i-3{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:1250px) {
+    .main-1 .intro{
+        padding: 0;
+    }
+}
+@media (max-width:1120px) {
+    .main-3 .srv-2 .srv {
+        margin: 0 40px;
+    }
+}
+@media (max-width:1110px) {
+    .main-4{
+        height: fit-content;
+        padding: 5vh 0;
+    }
+    .main-4 .mess{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .main-4 .mess .mess-1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-4 .mess form{
+        margin-top: 5vh;
+    }
+
+}
+@media (max-width:1050px) {
+    .main-1 .intro-img{
+        display: none;
+    }
+    .main-1 .intro{
+        width: 100%;
+    }
+    .main-1 .intro .intro-cont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .main-2 .ab-1 .ab-img{
+        display: none;
+    }
+    .ab-1 .ab-txt{
+        width: 100%;
+    }
+    .ab-1 .ab-txt .abt-1{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ab-1 .ab-txt .abt-2{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ab-1 .ab-txt .abt-3{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ab-1 .ab-txt .abt-4{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ab-1 .ab-txt .abt-4 a{
+        margin: 0 25px;
+    }
+
+
+}
+@media (max-width:875px) {
+    .main-3 .srv-2 .srv {
+        margin: 30px 0;
+    }
+    .main-3{
+        height: fit-content;
+    }
+    .main-3 .srv-1{
+        margin-top: 15px;
+    }
+    .main-3 .srv-2{
+        height: fit-content;
+        margin-top: 0px;
+    }
+}
+@media (max-width:950px) {
+    .main-2{
+        height:fit-content ;
+        padding-bottom: 5vh;
+    }
+    .main-2 .ab-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-2 .ab-2 .ab-bars-1{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .main-2 .ab-2 .ab-bars-2{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+/*شغل سكشن 2 من بعد 600 بكسل وانت نازل*/
+@media (max-width:600px){
+    .ab-1 .ab-txt .abt-1 {
+        font-size: 40px;
+    }
+    
+    .ab-1 .ab-txt .abt-2 {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .main-4{
+        padding: 5vh 20px;
+    }
+    .main-4 .mess .mess-1 .qust{
+        font-size: 30px;
+    }
+    .main-4 .mess .mess-1 .info{
+        font-size: 20px;
+    }
+    .main-4 .mess form{
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    .head .h-2{
+        display: none;
+    }
+    .head .h-3{
+        display: none;
+    }
+    .head .h-menu{
+        display: inline-block;
+    }
+}
+@media (max-width:500px) {
+    .head{
+        padding: 0 20px;
+    }
+    .intro .intro-cont .i-2{
+        font-size: 35px;
+        margin-top: -7px;
+    }
+    .intro .intro-cont .i-3{
+        font-size: 16px;
+        margin-top: -7px;
+    }
+    .intro .intro-cont .i-4{
+        margin-top: 15px;
+    }
+    .ab-2 .ab-bars-1 .main-bar{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .ab-2 .ab-bars-2 .main-bar {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+    
+    .ab-1 .ab-txt .abt-2 {
+        font-size: 11px;
+    }
+
+
+    .main-4 .mess .mess-1 .qust{
+        font-size: 24px;
+    }
+    .main-4 .mess .mess-1 .info{
+        font-size: 15px;
+    }
+    .main-4 .mess form .inp.btn {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+@media (max-width:400px) {
+    .main-3 .srv-2 .srv {
+
+    }
+    .srv-2 .srv .srv-title{
+        font-size: 22px;
+    }
+    .srv-2 .srv .srv-info a{
+        font-size: 18px;
+    }
+    .main-4 .mess .mess-1 .qust{
+        font-size: 19px;
+    }
+    .main-4 .mess .mess-1 .info{
+        font-size: 14px;
+    }
+}

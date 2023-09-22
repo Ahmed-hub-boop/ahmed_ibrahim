@@ -1,0 +1,39 @@
+:root{
+    --maincolor: #edf1fd;
+    --secondcolor: #ffffff;
+    --fontcolor: #d19a01;
+    --grcolor: #7c7c7c;
+}
+.intro .intro-cont .i-2{
+    color: rgb(46, 46, 46);
+}
+.intro .intro-cont .i-4 a{
+    color: white;
+}
+.intro .intro-cont .i-4 a:hover{
+    box-shadow: 0 10px 10px var(--grcolor);
+}
+.ab-1 .ab-txt .abt-4 a {
+    color: white;
+}
+.ab-1 .ab-txt .abt-4 a:hover{
+    box-shadow: 0 10px 10px var(--grcolor);
+}
+.ab-2 .ab-bars-2 .main-bar .bar-2 {
+    background-color: var(--grcolor);
+}
+.ab-2 .ab-bars-1 .main-bar .bar-2 {
+    background-color: var(--grcolor);
+}
+.srv-2 .srv .srv-info a {
+    color: white;
+}
+.srv-2 .srv .srv-info a:hover{
+    box-shadow: 0 10px 10px var(--grcolor);
+}
+.main-3 .srv-2 .srv:hover{
+    box-shadow: 0 0 20px var(--grcolor);
+}
+.mess form .inp.btn button {
+    color: white;
+}
