@@ -21,8 +21,6 @@ window.onscroll = function (){
         document.querySelector(`form`).style.top="0"
     }   
 }
-
-
         function sendEmail(){
                 Email.send({
                     SecureToken : "97327d16-c824-462c-bf9a-2b0e4779e27c",
@@ -37,9 +35,6 @@ window.onscroll = function (){
                 swal("Order Sent Successfully", "I will contact you as soon as possible", "success")
                 );
             }
-
-
-
     function golight(){
         var a = false
         if(a){
@@ -62,7 +57,6 @@ window.onscroll = function (){
         else{
             document.getElementById('sty').setAttribute("href","css/light-style.css");
             b = true
-
         }
     }
 

@@ -18,13 +18,11 @@ a{
 ::-webkit-scrollbar-thumb {
     background-color: var(--fontcolor);
 }
-
 body{
     transition: 1s ease all;
     font-family: 'Cairo', Arial;
     background-color: var(--maincolor);
 }
-
 .arr-up{
     position: fixed;
     z-index: -50;
@@ -53,9 +51,6 @@ body{
     /*top: -70px;*/
     animation: arr 1.5s ease;
 }
-
-
-
 .main-1{
     width: 100%;
     height: calc(100vh - 70px);
@@ -69,7 +64,6 @@ body{
     height: 70px;
     padding: 0 10vh;
     background-color: var(--maincolor);
-    
 }.head .h-1{
     display: flex;
     align-items: center;
@@ -91,7 +85,6 @@ body{
     color: var(--fontcolor);
     text-shadow: 0 10px 20px var(--fontcolor);
 }
-
 .head .h-3{
     font-size: 25px;
     color: white;
@@ -101,17 +94,11 @@ body{
     transform: rotate(360deg);
     color: var(--fontcolor);
 }
-
-
-
-
-
 .head .h-menu{
     display: none;
     font-size: 25px;
     color: white;
     transition: 0.5s ease all;
-    
 }
 .head .h-menu i{
     transition: 0.5s ease all;
@@ -127,9 +114,7 @@ body{
     opacity: 0;
     transition: 0.5s ease all;
     z-index: -10;
-    
 }
-
 .head .h-menu:hover .menu{
     top: 70px;
     z-index: 99;
@@ -138,8 +123,6 @@ body{
 .head .h-menu:hover .menu div{
     top: 0;
 }
-
-
 .head .h-menu .menu div a{
     color: white;
     transition: 0.5s all ease;
@@ -160,7 +143,6 @@ body{
 .head .h-menu .menu div:hover{
     background-color: var(--fontcolor);
 }
-
 .head .h-menu .menu .mu-2{
     top: -10vh;
 }
@@ -173,12 +155,10 @@ body{
 .head .h-menu .menu .mu-5{
     top: -40vh;
 }
-
 .main-1 .intro,.main-1 .intro-img{
     width: 50%;
     height: calc(100vh - 70px);
 }
-
 .main-1 .intro-img{
     display: flex;
     align-items: center;
@@ -198,11 +178,6 @@ body{
     transform: scale(1.2);
     opacity: 0.8;
 }
-
-
-
-
-
 .main-1 .intro{
     display: flex;
     justify-content: center;
@@ -244,8 +219,6 @@ body{
 .intro .intro-cont .i-4 a:hover{
     box-shadow: 0 10px 10px black;
 }
-
-
 .intro .intro-cont .links{
     width: 150px;
     display: flex;
@@ -257,15 +230,12 @@ body{
     font-size: 24px;
     transition: 0.5s all ease;
 }
-
 .intro .intro-cont .links a:hover{
     color: var(--fontcolor);
     text-shadow: 0 0 20px white;
 }
-
 .main-2{
     width: 100%;
-
     background-color: var(--secondcolor);
 }
 .ab-1{
@@ -347,10 +317,6 @@ body{
     top: 30px;
     left: 0;
 }
-
-
-
-
 .ab-2{
     width: 100%;
     display: flex;
@@ -389,12 +355,7 @@ body{
     background-color: var(--fontcolor);
     height: 100%;
     transition: 0.8s ease;
-
 }
-
-
-
-
 .ab-2 .ab-bars-2{
     width: 50%;
     height: 100%;
@@ -429,13 +390,6 @@ body{
     transition: 0.8s ease;
     
 }
-
-
-
-
-
-
-
 .main-3{
     width: 100%;
     height: 100vh;
@@ -474,9 +428,7 @@ body{
 }
 .main-3 .srv-2 .srv:hover{
     box-shadow: 0 0 40px 10px black;
-
 }
-
 .srv-2 .srv .srv-ico{
     display: flex;
     align-items: center;
@@ -524,8 +476,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-
 }
 .main-4 .mess .mess-1{
     display: flex;
@@ -542,8 +492,6 @@ body{
     font-size: 40px;
     font-weight: 600;
 }
-
-
 .main-4 .mess .mess-1 .mess-links{
     margin-top: 10px;
 }
@@ -555,13 +503,6 @@ body{
     text-shadow: 0 0 20px white;
     color: var(--fontcolor);
 }
-
-
-
-
-
-
-
 .main-4 .mess form{
     width: 450px;
     height: 500px;
@@ -583,7 +524,6 @@ body{
     display: flex;
     position: relative;
 }
-
 .mess form .inp input{
     width: 100%;
     background: none;
@@ -595,8 +535,6 @@ body{
     position: relative;
     padding-left: 10px;
 }
-
-
 .mess form .inp span::before{
     position: absolute;
     content: "";
@@ -615,7 +553,6 @@ body{
     pointer-events: none;
     transform: translateY(-50%);
 }
-
 .inp input:focus ~ label,
 .inp input:valid ~ label{
     top: -5px;
@@ -625,10 +562,6 @@ body{
 .inp input:valid ~ span::before{
     width: 100%;
 }
-
-
-
-
 .mess form .inp.btn{
     display: flex;
     align-items: center;
@@ -658,17 +591,11 @@ body{
     transition: 0.5s all ease;
     left: 0;
     top: 0;
-
 }
 .mess form .inp.btn button:hover i{
     top: -35px;
     left: 35px;
 }
-
-
-
-
-
 .main-5{
     width: 100%;
     height: 11vh;
@@ -678,36 +605,15 @@ body{
     flex-direction: column;
     font-size: 17px;
     color: var(--grcolor);
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:1510px) {
-
     .intro .intro-cont .i-2{
         font-size: 55px;
     }
     .intro .intro-cont .i-3{
         font-size: 20px;
     }
-
 }
-
 @media (max-width:1250px) {
     .main-1 .intro{
         padding: 0;
@@ -736,7 +642,6 @@ body{
     .main-4 .mess form{
         margin-top: 5vh;
     }
-
 }
 @media (max-width:1050px) {
     .main-1 .intro-img{
@@ -752,7 +657,6 @@ body{
         justify-content: center;
         flex-direction: column;
     }
-
     .main-2 .ab-1 .ab-img{
         display: none;
     }
@@ -786,8 +690,6 @@ body{
     .ab-1 .ab-txt .abt-4 a{
         margin: 0 25px;
     }
-
-
 }
 @media (max-width:875px) {
     .main-3 .srv-2 .srv {
@@ -828,13 +730,10 @@ body{
         padding: 0;
     }
 }
-
-/*شغل سكشن 2 من بعد 600 بكسل وانت نازل*/
 @media (max-width:600px){
     .ab-1 .ab-txt .abt-1 {
         font-size: 40px;
     }
-    
     .ab-1 .ab-txt .abt-2 {
         font-size: 14px;
         margin-top: 15px;
@@ -852,7 +751,6 @@ body{
         width: 100%;
     }
 }
-
 @media (max-width:700px) {
     .head .h-2{
         display: none;
@@ -887,14 +785,9 @@ body{
         width: 100%;
         padding: 0 20px;
     }
-
-
-    
     .ab-1 .ab-txt .abt-2 {
         font-size: 11px;
     }
-
-
     .main-4 .mess .mess-1 .qust{
         font-size: 24px;
     }
@@ -904,13 +797,9 @@ body{
     .main-4 .mess form .inp.btn {
         display: flex;
         justify-content: center;
-
     }
 }
 @media (max-width:400px) {
-    .main-3 .srv-2 .srv {
-
-    }
     .srv-2 .srv .srv-title{
         font-size: 22px;
     }
